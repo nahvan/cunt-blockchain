@@ -2,15 +2,15 @@ import logging
 import pathlib
 from typing import Dict
 
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
-from taco.server.outbound_message import NodeType
-from taco.server.start_service import run_service
-from taco.timelord.timelord import Timelord
-from taco.timelord.timelord_api import TimelordAPI
-from taco.types.peer_info import PeerInfo
-from taco.util.config import load_config_cli
-from taco.util.default_root import DEFAULT_ROOT_PATH
+from cunt.consensus.constants import ConsensusConstants
+from cunt.consensus.default_constants import DEFAULT_CONSTANTS
+from cunt.server.outbound_message import NodeType
+from cunt.server.start_service import run_service
+from cunt.timelord.timelord import Timelord
+from cunt.timelord.timelord_api import TimelordAPI
+from cunt.types.peer_info import PeerInfo
+from cunt.util.config import load_config_cli
+from cunt.util.default_root import DEFAULT_ROOT_PATH
 
 # See: https://bugs.python.org/issue29288
 "".encode("idna")

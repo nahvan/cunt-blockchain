@@ -1,6 +1,6 @@
 import pytest
 
-from taco.wallet.chialisp import (
+from cunt.wallet.chialisp import (
     apply,
     args,
     cons,

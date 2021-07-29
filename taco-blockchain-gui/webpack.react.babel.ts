@@ -72,8 +72,8 @@ export default {
       'node_modules',
     ],
     alias: {
-      "@taco/core": `${__dirname}/src/components/core`,
-      "@taco/icons": `${__dirname}/src/components/icons`,
+      "@cunt/core": `${__dirname}/src/components/core`,
+      "@cunt/icons": `${__dirname}/src/components/icons`,
       crypto: 'crypto-browserify',
       stream: 'stream-browserify',
     },

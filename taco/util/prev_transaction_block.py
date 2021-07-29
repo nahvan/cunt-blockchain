@@ -1,8 +1,8 @@
 from typing import Tuple
 
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.blockchain_interface import BlockchainInterface
-from taco.util.ints import uint128
+from cunt.consensus.block_record import BlockRecord
+from cunt.consensus.blockchain_interface import BlockchainInterface
+from cunt.util.ints import uint128
 
 
 def get_prev_transaction_block(

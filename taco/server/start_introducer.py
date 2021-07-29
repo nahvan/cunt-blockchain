@@ -1,12 +1,12 @@
 import pathlib
 from typing import Dict
 
-from taco.introducer.introducer import Introducer
-from taco.introducer.introducer_api import IntroducerAPI
-from taco.server.outbound_message import NodeType
-from taco.server.start_service import run_service
-from taco.util.config import load_config_cli
-from taco.util.default_root import DEFAULT_ROOT_PATH
+from cunt.introducer.introducer import Introducer
+from cunt.introducer.introducer_api import IntroducerAPI
+from cunt.server.outbound_message import NodeType
+from cunt.server.start_service import run_service
+from cunt.util.config import load_config_cli
+from cunt.util.default_root import DEFAULT_ROOT_PATH
 
 # See: https://bugs.python.org/issue29288
 "".encode("idna")

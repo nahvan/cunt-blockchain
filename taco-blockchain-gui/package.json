@@ -1,8 +1,8 @@
 {
-  "name": "taco-blockchain",
-  "author": "Taco Network <hello@taco.net> (https://taco.net/)",
-  "description": "GUI for Taco Blockchain",
-  "productName": "Taco Blockchain",
+  "name": "cunt-blockchain",
+  "author": "Cunt Network <hello@cunt.net> (https://cunt.net/)",
+  "description": "GUI for Cunt Blockchain",
+  "productName": "Cunt Blockchain",
   "private": true,
   "homepage": "./",
   "main": "build/electron/main.js",

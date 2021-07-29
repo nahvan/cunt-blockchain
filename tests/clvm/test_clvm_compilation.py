@@ -3,48 +3,48 @@ from unittest import TestCase
 
 from clvm_tools.clvmc import compile_clvm
 
-from taco.types.blockchain_format.program import Program, SerializedProgram
+from cunt.types.blockchain_format.program import Program, SerializedProgram
 
 wallet_program_files = set(
     [
-        "taco/wallet/puzzles/calculate_synthetic_public_key.clvm",
-        "taco/wallet/puzzles/cc.clvm",
-        "taco/wallet/puzzles/chialisp_deserialisation.clvm",
-        "taco/wallet/puzzles/rom_bootstrap_generator.clvm",
-        "taco/wallet/puzzles/generator_for_single_coin.clvm",
-        "taco/wallet/puzzles/genesis-by-coin-id-with-0.clvm",
-        "taco/wallet/puzzles/genesis-by-puzzle-hash-with-0.clvm",
-        "taco/wallet/puzzles/lock.inner.puzzle.clvm",
-        "taco/wallet/puzzles/p2_conditions.clvm",
-        "taco/wallet/puzzles/p2_delegated_conditions.clvm",
-        "taco/wallet/puzzles/p2_delegated_puzzle.clvm",
-        "taco/wallet/puzzles/p2_delegated_puzzle_or_hidden_puzzle.clvm",
-        "taco/wallet/puzzles/p2_m_of_n_delegate_direct.clvm",
-        "taco/wallet/puzzles/p2_puzzle_hash.clvm",
-        "taco/wallet/puzzles/rl_aggregation.clvm",
-        "taco/wallet/puzzles/rl.clvm",
-        "taco/wallet/puzzles/sha256tree_module.clvm",
-        "taco/wallet/puzzles/singleton_top_layer.clvm",
-        "taco/wallet/puzzles/did_innerpuz.clvm",
-        "taco/wallet/puzzles/decompress_puzzle.clvm",
-        "taco/wallet/puzzles/decompress_coin_solution_entry_with_prefix.clvm",
-        "taco/wallet/puzzles/decompress_coin_solution_entry.clvm",
-        "taco/wallet/puzzles/block_program_zero.clvm",
-        "taco/wallet/puzzles/test_generator_deserialize.clvm",
-        "taco/wallet/puzzles/test_multiple_generator_input_arguments.clvm",
-        "taco/wallet/puzzles/p2_singleton.clvm",
-        "taco/wallet/puzzles/pool_waitingroom_innerpuz.clvm",
-        "taco/wallet/puzzles/pool_member_innerpuz.clvm",
-        "taco/wallet/puzzles/singleton_launcher.clvm",
-        "taco/wallet/puzzles/p2_singleton_or_delayed_puzhash.clvm",
+        "cunt/wallet/puzzles/calculate_synthetic_public_key.clvm",
+        "cunt/wallet/puzzles/cc.clvm",
+        "cunt/wallet/puzzles/chialisp_deserialisation.clvm",
+        "cunt/wallet/puzzles/rom_bootstrap_generator.clvm",
+        "cunt/wallet/puzzles/generator_for_single_coin.clvm",
+        "cunt/wallet/puzzles/genesis-by-coin-id-with-0.clvm",
+        "cunt/wallet/puzzles/genesis-by-puzzle-hash-with-0.clvm",
+        "cunt/wallet/puzzles/lock.inner.puzzle.clvm",
+        "cunt/wallet/puzzles/p2_conditions.clvm",
+        "cunt/wallet/puzzles/p2_delegated_conditions.clvm",
+        "cunt/wallet/puzzles/p2_delegated_puzzle.clvm",
+        "cunt/wallet/puzzles/p2_delegated_puzzle_or_hidden_puzzle.clvm",
+        "cunt/wallet/puzzles/p2_m_of_n_delegate_direct.clvm",
+        "cunt/wallet/puzzles/p2_puzzle_hash.clvm",
+        "cunt/wallet/puzzles/rl_aggregation.clvm",
+        "cunt/wallet/puzzles/rl.clvm",
+        "cunt/wallet/puzzles/sha256tree_module.clvm",
+        "cunt/wallet/puzzles/singleton_top_layer.clvm",
+        "cunt/wallet/puzzles/did_innerpuz.clvm",
+        "cunt/wallet/puzzles/decompress_puzzle.clvm",
+        "cunt/wallet/puzzles/decompress_coin_solution_entry_with_prefix.clvm",
+        "cunt/wallet/puzzles/decompress_coin_solution_entry.clvm",
+        "cunt/wallet/puzzles/block_program_zero.clvm",
+        "cunt/wallet/puzzles/test_generator_deserialize.clvm",
+        "cunt/wallet/puzzles/test_multiple_generator_input_arguments.clvm",
+        "cunt/wallet/puzzles/p2_singleton.clvm",
+        "cunt/wallet/puzzles/pool_waitingroom_innerpuz.clvm",
+        "cunt/wallet/puzzles/pool_member_innerpuz.clvm",
+        "cunt/wallet/puzzles/singleton_launcher.clvm",
+        "cunt/wallet/puzzles/p2_singleton_or_delayed_puzhash.clvm",
     ]
 )
 
 clvm_include_files = set(
-    ["taco/wallet/puzzles/create-lock-puzzlehash.clvm", "taco/wallet/puzzles/condition_codes.clvm"]
+    ["cunt/wallet/puzzles/create-lock-puzzlehash.clvm", "cunt/wallet/puzzles/condition_codes.clvm"]
 )
 
-CLVM_PROGRAM_ROOT = "taco/wallet/puzzles"
+CLVM_PROGRAM_ROOT = "cunt/wallet/puzzles"
 
 
 def list_files(dir, glob):
@@ -71,7 +71,7 @@ class TestClvmCompilation(TestCase):
 
     def test_all_programs_listed(self):
         """
-        Checks to see if a new .clvm file was added to taco/wallet/puzzles, but not added to `wallet_program_files`
+        Checks to see if a new .clvm file was added to cunt/wallet/puzzles, but not added to `wallet_program_files`
         """
         existing_files = list_files(CLVM_PROGRAM_ROOT, "*.clvm")
         existing_file_paths = set([Path(x).relative_to(CLVM_PROGRAM_ROOT) for x in existing_files])

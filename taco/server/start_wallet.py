@@ -2,19 +2,19 @@ import pathlib
 from multiprocessing import freeze_support
 from typing import Dict
 
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
-from taco.rpc.wallet_rpc_api import WalletRpcApi
-from taco.server.outbound_message import NodeType
-from taco.server.start_service import run_service
-from taco.types.peer_info import PeerInfo
-from taco.util.config import load_config_cli, load_config
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.keychain import Keychain
-from taco.wallet.wallet_node import WalletNode
+from cunt.consensus.constants import ConsensusConstants
+from cunt.consensus.default_constants import DEFAULT_CONSTANTS
+from cunt.rpc.wallet_rpc_api import WalletRpcApi
+from cunt.server.outbound_message import NodeType
+from cunt.server.start_service import run_service
+from cunt.types.peer_info import PeerInfo
+from cunt.util.config import load_config_cli, load_config
+from cunt.util.default_root import DEFAULT_ROOT_PATH
+from cunt.util.keychain import Keychain
+from cunt.wallet.wallet_node import WalletNode
 
 # See: https://bugs.python.org/issue29288
-from taco.wallet.wallet_node_api import WalletNodeAPI
+from cunt.wallet.wallet_node_api import WalletNodeAPI
 
 "".encode("idna")
 

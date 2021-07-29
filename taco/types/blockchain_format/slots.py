@@ -3,11 +3,11 @@ from typing import Optional
 
 from blspy import G2Element
 
-from taco.types.blockchain_format.proof_of_space import ProofOfSpace
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.vdf import VDFInfo, VDFProof
-from taco.util.ints import uint8, uint64
-from taco.util.streamable import Streamable, streamable
+from cunt.types.blockchain_format.proof_of_space import ProofOfSpace
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.blockchain_format.vdf import VDFInfo, VDFProof
+from cunt.util.ints import uint8, uint64
+from cunt.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

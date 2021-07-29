@@ -1,8 +1,8 @@
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.pos_quality import _expected_plot_size
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.hash import std_hash
-from taco.util.ints import uint8, uint64, uint128
+from cunt.consensus.constants import ConsensusConstants
+from cunt.consensus.pos_quality import _expected_plot_size
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.util.hash import std_hash
+from cunt.util.ints import uint8, uint64, uint128
 
 
 def is_overflow_block(constants: ConsensusConstants, signage_point_index: uint8) -> bool:

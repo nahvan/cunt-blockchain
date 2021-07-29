@@ -1,27 +1,27 @@
 from typing import Any, Callable, Dict, List, Optional
 
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.pos_quality import UI_ACTUAL_SPACE_CONSTANT_FACTOR
-from taco.full_node.full_node import FullNode
-from taco.full_node.mempool_check_conditions import get_puzzle_and_solution_for_coin
-from taco.types.blockchain_format.program import Program, SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_record import CoinRecord
-from taco.types.coin_solution import CoinSolution
-from taco.types.full_block import FullBlock
-from taco.types.generator_types import BlockGenerator
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.types.spend_bundle import SpendBundle
-from taco.types.unfinished_header_block import UnfinishedHeaderBlock
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.ints import uint32, uint64, uint128
-from taco.util.ws_message import WsRpcMessage, create_payload_dict
+from cunt.consensus.block_record import BlockRecord
+from cunt.consensus.pos_quality import UI_ACTUAL_SPACE_CONSTANT_FACTOR
+from cunt.full_node.full_node import FullNode
+from cunt.full_node.mempool_check_conditions import get_puzzle_and_solution_for_coin
+from cunt.types.blockchain_format.program import Program, SerializedProgram
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.coin_record import CoinRecord
+from cunt.types.coin_solution import CoinSolution
+from cunt.types.full_block import FullBlock
+from cunt.types.generator_types import BlockGenerator
+from cunt.types.mempool_inclusion_status import MempoolInclusionStatus
+from cunt.types.spend_bundle import SpendBundle
+from cunt.types.unfinished_header_block import UnfinishedHeaderBlock
+from cunt.util.byte_types import hexstr_to_bytes
+from cunt.util.ints import uint32, uint64, uint128
+from cunt.util.ws_message import WsRpcMessage, create_payload_dict
 
 
 class FullNodeRpcApi:
     def __init__(self, service: FullNode):
         self.service = service
-        self.service_name = "taco_full_node"
+        self.service_name = "cunt_full_node"
         self.cached_blockchain_state: Optional[Dict] = None
 
     def get_routes(self) -> Dict[str, Callable]:

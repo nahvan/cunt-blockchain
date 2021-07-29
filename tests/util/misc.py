@@ -1,6 +1,6 @@
 import pytest
-from taco.util.misc import format_bytes
-from taco.util.misc import format_minutes
+from cunt.util.misc import format_bytes
+from cunt.util.misc import format_minutes
 
 
 class TestMisc:

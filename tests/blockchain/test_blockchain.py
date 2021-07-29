@@ -10,30 +10,30 @@ import pytest
 from blspy import AugSchemeMPL, G2Element
 from clvm.casts import int_to_bytes
 
-from taco.consensus.block_rewards import calculate_base_farmer_reward
-from taco.consensus.blockchain import ReceiveBlockResult
-from taco.consensus.coinbase import create_farmer_coin
-from taco.consensus.pot_iterations import is_overflow_block
-from taco.full_node.bundle_tools import detect_potential_template_generator
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.foliage import TransactionsInfo
-from taco.types.blockchain_format.program import SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.slots import InfusedChallengeChainSubSlot
-from taco.types.blockchain_format.vdf import VDFInfo, VDFProof
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.condition_with_args import ConditionWithArgs
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.types.full_block import FullBlock
-from taco.types.spend_bundle import SpendBundle
-from taco.types.unfinished_block import UnfinishedBlock
+from cunt.consensus.block_rewards import calculate_base_farmer_reward
+from cunt.consensus.blockchain import ReceiveBlockResult
+from cunt.consensus.coinbase import create_farmer_coin
+from cunt.consensus.pot_iterations import is_overflow_block
+from cunt.full_node.bundle_tools import detect_potential_template_generator
+from cunt.types.blockchain_format.classgroup import ClassgroupElement
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.foliage import TransactionsInfo
+from cunt.types.blockchain_format.program import SerializedProgram
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.blockchain_format.slots import InfusedChallengeChainSubSlot
+from cunt.types.blockchain_format.vdf import VDFInfo, VDFProof
+from cunt.types.condition_opcodes import ConditionOpcode
+from cunt.types.condition_with_args import ConditionWithArgs
+from cunt.types.end_of_slot_bundle import EndOfSubSlotBundle
+from cunt.types.full_block import FullBlock
+from cunt.types.spend_bundle import SpendBundle
+from cunt.types.unfinished_block import UnfinishedBlock
 from tests.block_tools import BlockTools, get_vdf_info_and_proof
-from taco.util.errors import Err
-from taco.util.hash import std_hash
-from taco.util.ints import uint8, uint64, uint32
-from taco.util.merkle_set import MerkleSet
-from taco.util.recursive_replace import recursive_replace
+from cunt.util.errors import Err
+from cunt.util.hash import std_hash
+from cunt.util.ints import uint8, uint64, uint32
+from cunt.util.merkle_set import MerkleSet
+from cunt.util.recursive_replace import recursive_replace
 from tests.wallet_tools import WalletTool
 from tests.core.fixtures import default_400_blocks  # noqa: F401; noqa: F401
 from tests.core.fixtures import default_1000_blocks  # noqa: F401

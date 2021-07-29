@@ -8,14 +8,14 @@ import aiosqlite
 import pytest
 from clvm_tools import binutils
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program, SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_solution import CoinSolution
-from taco.util.db_wrapper import DBWrapper
-from taco.util.ints import uint64
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.program import Program, SerializedProgram
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.coin_solution import CoinSolution
+from cunt.util.db_wrapper import DBWrapper
+from cunt.util.ints import uint64
 
-from taco.wallet.wallet_pool_store import WalletPoolStore
+from cunt.wallet.wallet_pool_store import WalletPoolStore
 
 log = logging.getLogger(__name__)
 

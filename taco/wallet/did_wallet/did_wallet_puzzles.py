@@ -1,13 +1,13 @@
 from clvm_tools import binutils
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.program import Program
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.blockchain_format.program import Program
 from typing import List, Optional, Tuple
 from blspy import G1Element
-from taco.types.blockchain_format.coin import Coin
-from taco.types.coin_solution import CoinSolution
-from taco.util.ints import uint64
-from taco.wallet.puzzles.load_clvm import load_clvm
-from taco.types.condition_opcodes import ConditionOpcode
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.coin_solution import CoinSolution
+from cunt.util.ints import uint64
+from cunt.wallet.puzzles.load_clvm import load_clvm
+from cunt.types.condition_opcodes import ConditionOpcode
 
 
 SINGLETON_TOP_LAYER_MOD = load_clvm("singleton_top_layer.clvm")

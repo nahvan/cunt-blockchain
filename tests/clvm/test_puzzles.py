@@ -3,13 +3,13 @@ from unittest import TestCase
 
 from blspy import AugSchemeMPL, BasicSchemeMPL, G1Element, G2Element
 
-from taco.types.blockchain_format.program import Program
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_solution import CoinSolution
-from taco.types.spend_bundle import SpendBundle
-from taco.util.condition_tools import ConditionOpcode
-from taco.util.hash import std_hash
-from taco.wallet.puzzles import (
+from cunt.types.blockchain_format.program import Program
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.coin_solution import CoinSolution
+from cunt.types.spend_bundle import SpendBundle
+from cunt.util.condition_tools import ConditionOpcode
+from cunt.util.hash import std_hash
+from cunt.wallet.puzzles import (
     p2_conditions,
     p2_delegated_conditions,
     p2_delegated_puzzle,

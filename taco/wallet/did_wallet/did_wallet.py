@@ -6,28 +6,28 @@ from typing import Dict, Optional, List, Any, Set, Tuple, Union
 
 from blspy import AugSchemeMPL, G1Element
 from secrets import token_bytes
-from taco.protocols import wallet_protocol
-from taco.protocols.wallet_protocol import RespondAdditions, RejectAdditionsRequest
-from taco.server.outbound_message import NodeType
-from taco.types.blockchain_format.coin import Coin
-from taco.types.coin_solution import CoinSolution
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.program import Program
-from taco.types.spend_bundle import SpendBundle
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.wallet.util.transaction_type import TransactionType
-from taco.util.ints import uint64, uint32, uint8
+from cunt.protocols import wallet_protocol
+from cunt.protocols.wallet_protocol import RespondAdditions, RejectAdditionsRequest
+from cunt.server.outbound_message import NodeType
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.coin_solution import CoinSolution
+from cunt.types.announcement import Announcement
+from cunt.types.blockchain_format.program import Program
+from cunt.types.spend_bundle import SpendBundle
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.wallet.util.transaction_type import TransactionType
+from cunt.util.ints import uint64, uint32, uint8
 
-from taco.wallet.did_wallet.did_info import DIDInfo
-from taco.wallet.lineage_proof import LineageProof
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet import Wallet
-from taco.wallet.wallet_coin_record import WalletCoinRecord
-from taco.wallet.wallet_info import WalletInfo
-from taco.wallet.derivation_record import DerivationRecord
-from taco.wallet.did_wallet import did_wallet_puzzles
-from taco.wallet.derive_keys import master_sk_to_wallet_sk
+from cunt.wallet.did_wallet.did_info import DIDInfo
+from cunt.wallet.lineage_proof import LineageProof
+from cunt.wallet.transaction_record import TransactionRecord
+from cunt.wallet.util.wallet_types import WalletType
+from cunt.wallet.wallet import Wallet
+from cunt.wallet.wallet_coin_record import WalletCoinRecord
+from cunt.wallet.wallet_info import WalletInfo
+from cunt.wallet.derivation_record import DerivationRecord
+from cunt.wallet.did_wallet import did_wallet_puzzles
+from cunt.wallet.derive_keys import master_sk_to_wallet_sk
 
 
 class DIDWallet:

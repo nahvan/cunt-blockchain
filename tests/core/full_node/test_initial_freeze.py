@@ -3,18 +3,18 @@ import time
 
 import pytest
 
-from taco.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
-from taco.consensus.blockchain import ReceiveBlockResult
-from taco.protocols import full_node_protocol, wallet_protocol
-from taco.protocols.protocol_message_types import ProtocolMessageTypes
-from taco.server.outbound_message import Message
-from taco.simulator.full_node_simulator import FullNodeSimulator
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.mempool_inclusion_status import MempoolInclusionStatus
-from taco.types.peer_info import PeerInfo
-from taco.util.errors import Err
-from taco.util.ints import uint16, uint32
-from taco.wallet.transaction_record import TransactionRecord
+from cunt.consensus.block_rewards import calculate_base_farmer_reward, calculate_pool_reward
+from cunt.consensus.blockchain import ReceiveBlockResult
+from cunt.protocols import full_node_protocol, wallet_protocol
+from cunt.protocols.protocol_message_types import ProtocolMessageTypes
+from cunt.server.outbound_message import Message
+from cunt.simulator.full_node_simulator import FullNodeSimulator
+from cunt.simulator.simulator_protocol import FarmNewBlockProtocol
+from cunt.types.mempool_inclusion_status import MempoolInclusionStatus
+from cunt.types.peer_info import PeerInfo
+from cunt.util.errors import Err
+from cunt.util.ints import uint16, uint32
+from cunt.wallet.transaction_record import TransactionRecord
 from tests.core.full_node.test_full_node import add_dummy_connection
 from tests.setup_nodes import bt, self_hostname, setup_simulators_and_wallets
 from tests.time_out_assert import time_out_assert

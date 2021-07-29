@@ -4,13 +4,13 @@ from typing import Optional, Tuple, List, Union
 from clvm import SExp
 from clvm_tools import binutils
 
-from taco.full_node.generator import create_compressed_generator
-from taco.types.blockchain_format.program import SerializedProgram, Program
-from taco.types.coin_solution import CoinSolution
-from taco.types.generator_types import BlockGenerator, CompressorArg
-from taco.types.spend_bundle import SpendBundle
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.ints import uint32, uint64
+from cunt.full_node.generator import create_compressed_generator
+from cunt.types.blockchain_format.program import SerializedProgram, Program
+from cunt.types.coin_solution import CoinSolution
+from cunt.types.generator_types import BlockGenerator, CompressorArg
+from cunt.types.spend_bundle import SpendBundle
+from cunt.util.byte_types import hexstr_to_bytes
+from cunt.util.ints import uint32, uint64
 
 
 def spend_bundle_to_serialized_coin_solution_entry_list(bundle: SpendBundle) -> bytes:

@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.ints import uint32, uint64
-from taco.util.streamable import Streamable, streamable
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.util.ints import uint32, uint64
+from cunt.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

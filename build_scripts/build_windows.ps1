@@ -34,24 +34,24 @@ pip install pyinstaller==4.2
 pip install setuptools_scm
 
 Write-Output "   ---"
-Write-Output "Get TACO_INSTALLER_VERSION"
-# The environment variable TACO_INSTALLER_VERSION needs to be defined
-$env:TACO_INSTALLER_VERSION = python .\build_scripts\installer-version.py -win
+Write-Output "Get CUNT_INSTALLER_VERSION"
+# The environment variable CUNT_INSTALLER_VERSION needs to be defined
+$env:CUNT_INSTALLER_VERSION = python .\build_scripts\installer-version.py -win
 
-if (-not (Test-Path env:TACO_INSTALLER_VERSION)) {
-  $env:TACO_INSTALLER_VERSION = '0.0.0'
-  Write-Output "WARNING: No environment variable TACO_INSTALLER_VERSION set. Using 0.0.0"
+if (-not (Test-Path env:CUNT_INSTALLER_VERSION)) {
+  $env:CUNT_INSTALLER_VERSION = '0.0.0'
+  Write-Output "WARNING: No environment variable CUNT_INSTALLER_VERSION set. Using 0.0.0"
   }
-Write-Output "Taco Version is: $env:TACO_INSTALLER_VERSION"
+Write-Output "Cunt Version is: $env:CUNT_INSTALLER_VERSION"
 Write-Output "   ---"
 
 Write-Output "   ---"
-Write-Output "Build taco-blockchain wheels"
+Write-Output "Build cunt-blockchain wheels"
 Write-Output "   ---"
 pip wheel --use-pep517 --extra-index-url https://pypi.chia.net/simple/ -f . --wheel-dir=.\build_scripts\win_build .
 
 Write-Output "   ---"
-Write-Output "Install taco-blockchain wheels into venv with pip"
+Write-Output "Install cunt-blockchain wheels into venv with pip"
 Write-Output "   ---"
 
 Write-Output "pip install miniupnpc"
@@ -60,20 +60,20 @@ pip install --no-index --find-links=.\win_build\ miniupnpc
 # Write-Output "pip install setproctitle"
 # pip install setproctitle==1.2.2
 
-Write-Output "pip install taco-blockchain"
-pip install --no-index --find-links=.\win_build\ taco-blockchain
+Write-Output "pip install cunt-blockchain"
+pip install --no-index --find-links=.\win_build\ cunt-blockchain
 
 Write-Output "   ---"
-Write-Output "Use pyinstaller to create taco .exe's"
+Write-Output "Use pyinstaller to create cunt .exe's"
 Write-Output "   ---"
-$SPEC_FILE = (python -c 'import taco; print(taco.PYINSTALLER_SPEC_PATH)') -join "`n"
+$SPEC_FILE = (python -c 'import cunt; print(cunt.PYINSTALLER_SPEC_PATH)') -join "`n"
 pyinstaller --log-level INFO $SPEC_FILE
 
 Write-Output "   ---"
-Write-Output "Copy taco executables to taco-blockchain-gui\"
+Write-Output "Copy cunt executables to cunt-blockchain-gui\"
 Write-Output "   ---"
-Copy-Item "dist\daemon" -Destination "..\taco-blockchain-gui\" -Recurse
-Set-Location -Path "..\taco-blockchain-gui" -PassThru
+Copy-Item "dist\daemon" -Destination "..\cunt-blockchain-gui\" -Recurse
+Set-Location -Path "..\cunt-blockchain-gui" -PassThru
 
 git status
 
@@ -97,19 +97,19 @@ If ($LastExitCode -gt 0){
 }
 
 Write-Output "   ---"
-Write-Output "Increase the stack for taco command for (taco plots create) chiapos limitations"
+Write-Output "Increase the stack for cunt command for (cunt plots create) chiapos limitations"
 # editbin.exe needs to be in the path
-editbin.exe /STACK:8000000 daemon\taco.exe
+editbin.exe /STACK:8000000 daemon\cunt.exe
 Write-Output "   ---"
 
-$packageVersion = "$env:TACO_INSTALLER_VERSION"
-$packageName = "Taco-$packageVersion"
+$packageVersion = "$env:CUNT_INSTALLER_VERSION"
+$packageName = "Cunt-$packageVersion"
 
 Write-Output "packageName is $packageName"
 
 Write-Output "   ---"
 Write-Output "electron-packager"
-electron-packager . Taco --asar.unpack="**\daemon\**" --overwrite --icon=.\src\assets\img\taco.ico --app-version=$packageVersion
+electron-packager . Cunt --asar.unpack="**\daemon\**" --overwrite --icon=.\src\assets\img\cunt.ico --app-version=$packageVersion
 Write-Output "   ---"
 
 Write-Output "   ---"
@@ -123,8 +123,8 @@ If ($env:HAS_SECRET) {
    Write-Output "   ---"
    Write-Output "Add timestamp and verify signature"
    Write-Output "   ---"
-   signtool.exe timestamp /v /t http://timestamp.comodoca.com/ .\release-builds\windows-installer\TacoSetup-$packageVersion.exe
-   signtool.exe verify /v /pa .\release-builds\windows-installer\TacoSetup-$packageVersion.exe
+   signtool.exe timestamp /v /t http://timestamp.comodoca.com/ .\release-builds\windows-installer\CuntSetup-$packageVersion.exe
+   signtool.exe verify /v /pa .\release-builds\windows-installer\CuntSetup-$packageVersion.exe
    }   Else    {
    Write-Output "Skipping timestamp and verify signatures - no authorization to install certificates"
 }

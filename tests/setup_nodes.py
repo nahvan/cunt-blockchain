@@ -4,24 +4,24 @@ import signal
 from secrets import token_bytes
 from typing import Dict, List, Optional
 
-from taco.consensus.constants import ConsensusConstants
-from taco.daemon.server import WebSocketServer, create_server_for_daemon, daemon_launch_lock_path, singleton
-from taco.full_node.full_node_api import FullNodeAPI
-from taco.server.start_farmer import service_kwargs_for_farmer
-from taco.server.start_full_node import service_kwargs_for_full_node
-from taco.server.start_harvester import service_kwargs_for_harvester
-from taco.server.start_introducer import service_kwargs_for_introducer
-from taco.server.start_service import Service
-from taco.server.start_timelord import service_kwargs_for_timelord
-from taco.server.start_wallet import service_kwargs_for_wallet
-from taco.simulator.start_simulator import service_kwargs_for_full_node_simulator
-from taco.timelord.timelord_launcher import kill_processes, spawn_process
-from taco.types.peer_info import PeerInfo
-from taco.util.bech32m import encode_puzzle_hash
+from cunt.consensus.constants import ConsensusConstants
+from cunt.daemon.server import WebSocketServer, create_server_for_daemon, daemon_launch_lock_path, singleton
+from cunt.full_node.full_node_api import FullNodeAPI
+from cunt.server.start_farmer import service_kwargs_for_farmer
+from cunt.server.start_full_node import service_kwargs_for_full_node
+from cunt.server.start_harvester import service_kwargs_for_harvester
+from cunt.server.start_introducer import service_kwargs_for_introducer
+from cunt.server.start_service import Service
+from cunt.server.start_timelord import service_kwargs_for_timelord
+from cunt.server.start_wallet import service_kwargs_for_wallet
+from cunt.simulator.start_simulator import service_kwargs_for_full_node_simulator
+from cunt.timelord.timelord_launcher import kill_processes, spawn_process
+from cunt.types.peer_info import PeerInfo
+from cunt.util.bech32m import encode_puzzle_hash
 from tests.block_tools import BlockTools, test_constants
-from taco.util.hash import std_hash
-from taco.util.ints import uint16, uint32
-from taco.util.keychain import Keychain, bytes_to_mnemonic
+from cunt.util.hash import std_hash
+from cunt.util.ints import uint16, uint32
+from cunt.util.keychain import Keychain, bytes_to_mnemonic
 from tests.time_out_assert import time_out_assert_custom_interval
 
 bt = BlockTools(constants=test_constants)
@@ -207,10 +207,10 @@ async def setup_farmer(
     config = bt.config["farmer"]
     config_pool = bt.config["pool"]
 
-    config["xtx_target_address"] = encode_puzzle_hash(b_tools.farmer_ph, "xtx")
+    config["vag_target_address"] = encode_puzzle_hash(b_tools.farmer_ph, "vag")
     config["pool_public_keys"] = [bytes(pk).hex() for pk in b_tools.pool_pubkeys]
     config["port"] = port
-    config_pool["xtx_target_address"] = encode_puzzle_hash(b_tools.pool_ph, "xtx")
+    config_pool["vag_target_address"] = encode_puzzle_hash(b_tools.pool_ph, "vag")
 
     if full_node_port:
         config["full_node_peer"]["host"] = self_hostname

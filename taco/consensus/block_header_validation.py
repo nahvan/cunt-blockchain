@@ -5,31 +5,31 @@ from typing import Optional, Tuple
 
 from blspy import AugSchemeMPL
 
-from taco.consensus.block_record import BlockRecord
-from taco.consensus.blockchain_interface import BlockchainInterface
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.deficit import calculate_deficit
-from taco.consensus.difficulty_adjustment import can_finish_sub_and_full_epoch
-from taco.consensus.get_block_challenge import final_eos_is_already_included, get_block_challenge
-from taco.consensus.make_sub_epoch_summary import make_sub_epoch_summary
-from taco.consensus.pot_iterations import (
+from cunt.consensus.block_record import BlockRecord
+from cunt.consensus.blockchain_interface import BlockchainInterface
+from cunt.consensus.constants import ConsensusConstants
+from cunt.consensus.deficit import calculate_deficit
+from cunt.consensus.difficulty_adjustment import can_finish_sub_and_full_epoch
+from cunt.consensus.get_block_challenge import final_eos_is_already_included, get_block_challenge
+from cunt.consensus.make_sub_epoch_summary import make_sub_epoch_summary
+from cunt.consensus.pot_iterations import (
     calculate_ip_iters,
     calculate_iterations_quality,
     calculate_sp_interval_iters,
     calculate_sp_iters,
     is_overflow_block,
 )
-from taco.consensus.vdf_info_computation import get_signage_point_vdf_info
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.slots import ChallengeChainSubSlot, RewardChainSubSlot, SubSlotProofs
-from taco.types.blockchain_format.vdf import VDFInfo, VDFProof
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.types.header_block import HeaderBlock
-from taco.types.unfinished_header_block import UnfinishedHeaderBlock
-from taco.util.errors import Err, ValidationError
-from taco.util.hash import std_hash
-from taco.util.ints import uint8, uint32, uint64, uint128
+from cunt.consensus.vdf_info_computation import get_signage_point_vdf_info
+from cunt.types.blockchain_format.classgroup import ClassgroupElement
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.blockchain_format.slots import ChallengeChainSubSlot, RewardChainSubSlot, SubSlotProofs
+from cunt.types.blockchain_format.vdf import VDFInfo, VDFProof
+from cunt.types.end_of_slot_bundle import EndOfSubSlotBundle
+from cunt.types.header_block import HeaderBlock
+from cunt.types.unfinished_header_block import UnfinishedHeaderBlock
+from cunt.util.errors import Err, ValidationError
+from cunt.util.hash import std_hash
+from cunt.util.ints import uint8, uint32, uint64, uint128
 
 log = logging.getLogger(__name__)
 

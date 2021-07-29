@@ -6,13 +6,13 @@ from typing import List
 
 import pytest
 
-from taco.full_node.weight_proof import _validate_sub_epoch_summaries
-from taco.protocols import full_node_protocol
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.types.full_block import FullBlock
-from taco.types.peer_info import PeerInfo
-from taco.util.hash import std_hash
-from taco.util.ints import uint16
+from cunt.full_node.weight_proof import _validate_sub_epoch_summaries
+from cunt.protocols import full_node_protocol
+from cunt.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from cunt.types.full_block import FullBlock
+from cunt.types.peer_info import PeerInfo
+from cunt.util.hash import std_hash
+from cunt.util.ints import uint16
 from tests.core.fixtures import default_400_blocks, default_1000_blocks, default_10000_blocks, empty_blockchain
 from tests.core.node_height import node_height_exactly, node_height_between
 from tests.setup_nodes import bt, self_hostname, setup_n_nodes, setup_two_nodes, test_constants

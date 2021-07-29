@@ -1,19 +1,19 @@
 import logging
 from typing import List, Optional, Union, Tuple
-from taco.types.blockchain_format.program import Program, SerializedProgram
-from taco.types.generator_types import BlockGenerator, GeneratorArg, GeneratorBlockCacheInterface, CompressorArg
-from taco.util.ints import uint32, uint64
-from taco.wallet.puzzles.load_clvm import load_clvm
-from taco.wallet.puzzles.rom_bootstrap_generator import get_generator
+from cunt.types.blockchain_format.program import Program, SerializedProgram
+from cunt.types.generator_types import BlockGenerator, GeneratorArg, GeneratorBlockCacheInterface, CompressorArg
+from cunt.util.ints import uint32, uint64
+from cunt.wallet.puzzles.load_clvm import load_clvm
+from cunt.wallet.puzzles.rom_bootstrap_generator import get_generator
 
 GENERATOR_MOD = get_generator()
 
-DECOMPRESS_BLOCK = load_clvm("block_program_zero.clvm", package_or_requirement="taco.wallet.puzzles")
-DECOMPRESS_PUZZLE = load_clvm("decompress_puzzle.clvm", package_or_requirement="taco.wallet.puzzles")
-# DECOMPRESS_CSE = load_clvm("decompress_coin_solution_entry.clvm", package_or_requirement="taco.wallet.puzzles")
+DECOMPRESS_BLOCK = load_clvm("block_program_zero.clvm", package_or_requirement="cunt.wallet.puzzles")
+DECOMPRESS_PUZZLE = load_clvm("decompress_puzzle.clvm", package_or_requirement="cunt.wallet.puzzles")
+# DECOMPRESS_CSE = load_clvm("decompress_coin_solution_entry.clvm", package_or_requirement="cunt.wallet.puzzles")
 
 DECOMPRESS_CSE_WITH_PREFIX = load_clvm(
-    "decompress_coin_solution_entry_with_prefix.clvm", package_or_requirement="taco.wallet.puzzles"
+    "decompress_coin_solution_entry_with_prefix.clvm", package_or_requirement="cunt.wallet.puzzles"
 )
 log = logging.getLogger(__name__)
 

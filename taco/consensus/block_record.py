@@ -1,14 +1,14 @@
 from dataclasses import dataclass
 from typing import List, Optional
 
-from taco.consensus.constants import ConsensusConstants
-from taco.consensus.pot_iterations import calculate_ip_iters, calculate_sp_iters
-from taco.types.blockchain_format.classgroup import ClassgroupElement
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.util.ints import uint8, uint32, uint64, uint128
-from taco.util.streamable import Streamable, streamable
+from cunt.consensus.constants import ConsensusConstants
+from cunt.consensus.pot_iterations import calculate_ip_iters, calculate_sp_iters
+from cunt.types.blockchain_format.classgroup import ClassgroupElement
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from cunt.util.ints import uint8, uint32, uint64, uint128
+from cunt.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

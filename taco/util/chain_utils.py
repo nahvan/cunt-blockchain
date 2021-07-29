@@ -1,9 +1,9 @@
 from typing import List
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import SerializedProgram
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.condition_tools import (
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.program import SerializedProgram
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.util.condition_tools import (
     conditions_dict_for_solution,
     created_outputs_for_conditions_dict,
 )

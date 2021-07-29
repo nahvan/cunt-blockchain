@@ -1,6 +1,6 @@
 import unittest
 
-from taco.util.lru_cache import LRUCache
+from cunt.util.lru_cache import LRUCache
 
 
 class TestLRUCache(unittest.TestCase):

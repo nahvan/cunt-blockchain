@@ -1,19 +1,19 @@
 from typing import KeysView, Generator
 
 SERVICES_FOR_GROUP = {
-    "all": "taco_harvester taco_timelord_launcher taco_timelord taco_farmer taco_full_node taco_wallet".split(),
-    "node": "taco_full_node".split(),
-    "harvester": "taco_harvester".split(),
-    "farmer": "taco_harvester taco_farmer taco_full_node taco_wallet".split(),
-    "farmer-no-wallet": "taco_harvester taco_farmer taco_full_node".split(),
-    "farmer-only": "taco_farmer".split(),
-    "timelord": "taco_timelord_launcher taco_timelord taco_full_node".split(),
-    "timelord-only": "taco_timelord".split(),
-    "timelord-launcher-only": "taco_timelord_launcher".split(),
-    "wallet": "taco_wallet taco_full_node".split(),
-    "wallet-only": "taco_wallet".split(),
-    "introducer": "taco_introducer".split(),
-    "simulator": "taco_full_node_simulator".split(),
+    "all": "cunt_harvester cunt_timelord_launcher cunt_timelord cunt_farmer cunt_full_node cunt_wallet".split(),
+    "node": "cunt_full_node".split(),
+    "harvester": "cunt_harvester".split(),
+    "farmer": "cunt_harvester cunt_farmer cunt_full_node cunt_wallet".split(),
+    "farmer-no-wallet": "cunt_harvester cunt_farmer cunt_full_node".split(),
+    "farmer-only": "cunt_farmer".split(),
+    "timelord": "cunt_timelord_launcher cunt_timelord cunt_full_node".split(),
+    "timelord-only": "cunt_timelord".split(),
+    "timelord-launcher-only": "cunt_timelord_launcher".split(),
+    "wallet": "cunt_wallet cunt_full_node".split(),
+    "wallet-only": "cunt_wallet".split(),
+    "introducer": "cunt_introducer".split(),
+    "simulator": "cunt_full_node_simulator".split(),
 }
 
 

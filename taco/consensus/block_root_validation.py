@@ -1,9 +1,9 @@
 from typing import Dict, List, Optional
 
-from taco.types.blockchain_format.coin import Coin, hash_coin_list
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.errors import Err
-from taco.util.merkle_set import MerkleSet
+from cunt.types.blockchain_format.coin import Coin, hash_coin_list
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.util.errors import Err
+from cunt.util.merkle_set import MerkleSet
 
 
 def validate_block_merkle_roots(

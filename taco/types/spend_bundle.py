@@ -3,10 +3,10 @@ from typing import List
 
 from blspy import AugSchemeMPL, G2Element
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.streamable import Streamable, streamable
-from taco.wallet.util.debug_spend_bundle import debug_spend_bundle
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.util.streamable import Streamable, streamable
+from cunt.wallet.util.debug_spend_bundle import debug_spend_bundle
 
 from .coin_solution import CoinSolution
 

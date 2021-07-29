@@ -3,12 +3,12 @@ from binascii import hexlify
 
 from clvm_tools import binutils
 
-from taco.types.blockchain_format.program import Program
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.util.ints import uint64
-from taco.wallet.chialisp import sexp
-from taco.wallet.puzzles.load_clvm import load_clvm
+from cunt.types.blockchain_format.program import Program
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.condition_opcodes import ConditionOpcode
+from cunt.util.ints import uint64
+from cunt.wallet.chialisp import sexp
+from cunt.wallet.puzzles.load_clvm import load_clvm
 
 RATE_LIMITED_MODE = 1
 AGGREGATION_MODE = 2
@@ -27,7 +27,7 @@ def rl_puzzle_for_pk(
     (1 my_parent_id, my_puzzlehash, my_amount, outgoing_puzzle_hash, outgoing_amount,
      min_block_time, parent_parent_id, parent_amount, fee)
     RATE LIMIT LOGIC:
-    M - taco_per_interval
+    M - cunt_per_interval
     N - interval_blocks
     V - amount being spent
     MIN_BLOCK_AGE = V / (M / N)

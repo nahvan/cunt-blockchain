@@ -1,9 +1,9 @@
 from dataclasses import dataclass
 from typing import List
 
-from taco.types.blockchain_format.coin import Coin
-from taco.types.header_block import HeaderBlock
-from taco.util.streamable import Streamable, streamable
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.header_block import HeaderBlock
+from cunt.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

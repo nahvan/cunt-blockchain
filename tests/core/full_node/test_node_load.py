@@ -3,9 +3,9 @@ import time
 
 import pytest
 
-from taco.protocols import full_node_protocol
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16
+from cunt.protocols import full_node_protocol
+from cunt.types.peer_info import PeerInfo
+from cunt.util.ints import uint16
 from tests.connection_utils import connect_and_get_peer
 from tests.setup_nodes import bt, self_hostname, setup_two_nodes, test_constants
 from tests.time_out_assert import time_out_assert

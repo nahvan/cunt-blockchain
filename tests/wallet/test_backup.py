@@ -4,12 +4,12 @@
 #
 # import pytest
 #
-# from taco.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
-# from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-# from taco.types.peer_info import PeerInfo
-# from taco.util.ints import uint16, uint32, uint64
+# from cunt.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
+# from cunt.simulator.simulator_protocol import FarmNewBlockProtocol
+# from cunt.types.peer_info import PeerInfo
+# from cunt.util.ints import uint16, uint32, uint64
 # from tests.setup_nodes import setup_simulators_and_wallets
-# from taco.wallet.cc_wallet.cc_wallet import CCWallet
+# from cunt.wallet.cc_wallet.cc_wallet import CCWallet
 # from tests.time_out_assert import time_out_assert
 #
 #

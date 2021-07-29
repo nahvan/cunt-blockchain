@@ -1,12 +1,12 @@
 from dataclasses import dataclass
 from typing import List, Optional
 
-from taco.consensus.condition_costs import ConditionCost
-from taco.types.blockchain_format.program import SerializedProgram
-from taco.types.condition_opcodes import ConditionOpcode
-from taco.types.name_puzzle_condition import NPC
-from taco.util.ints import uint64, uint16
-from taco.util.streamable import Streamable, streamable
+from cunt.consensus.condition_costs import ConditionCost
+from cunt.types.blockchain_format.program import SerializedProgram
+from cunt.types.condition_opcodes import ConditionOpcode
+from cunt.types.name_puzzle_condition import NPC
+from cunt.util.ints import uint64, uint16
+from cunt.util.streamable import Streamable, streamable
 
 
 @dataclass(frozen=True)

@@ -2,25 +2,25 @@
 import asyncio
 import time
 import pytest
-from taco.simulator.simulator_protocol import FarmNewBlockProtocol
-from taco.types.peer_info import PeerInfo
-from taco.util.ints import uint16, uint32, uint64
+from cunt.simulator.simulator_protocol import FarmNewBlockProtocol
+from cunt.types.peer_info import PeerInfo
+from cunt.util.ints import uint16, uint32, uint64
 from tests.setup_nodes import setup_simulators_and_wallets
-from taco.wallet.did_wallet.did_wallet import DIDWallet
-from taco.wallet.did_wallet import did_wallet_puzzles
+from cunt.wallet.did_wallet.did_wallet import DIDWallet
+from cunt.wallet.did_wallet import did_wallet_puzzles
 from clvm_tools import binutils
-from taco.types.blockchain_format.program import Program
-from taco.wallet.derivation_record import DerivationRecord
-from taco.types.coin_solution import CoinSolution
+from cunt.types.blockchain_format.program import Program
+from cunt.wallet.derivation_record import DerivationRecord
+from cunt.types.coin_solution import CoinSolution
 from blspy import AugSchemeMPL
-from taco.types.spend_bundle import SpendBundle
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.derive_keys import master_sk_to_wallet_sk
-from taco.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
+from cunt.types.spend_bundle import SpendBundle
+from cunt.wallet.transaction_record import TransactionRecord
+from cunt.wallet.derive_keys import master_sk_to_wallet_sk
+from cunt.consensus.block_rewards import calculate_pool_reward, calculate_base_farmer_reward
 from tests.time_out_assert import time_out_assert
 from secrets import token_bytes
-from taco.wallet.util.transaction_type import TransactionType
-from taco.consensus.default_constants import DEFAULT_CONSTANTS
+from cunt.wallet.util.transaction_type import TransactionType
+from cunt.consensus.default_constants import DEFAULT_CONSTANTS
 
 
 @pytest.fixture(scope="module")

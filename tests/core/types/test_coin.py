@@ -1,7 +1,7 @@
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.ints import uint64
-from taco.util.hash import std_hash
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.util.ints import uint64
+from cunt.util.hash import std_hash
 import io
 
 

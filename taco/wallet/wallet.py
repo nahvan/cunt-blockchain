@@ -4,26 +4,26 @@ from typing import Any, Dict, List, Optional, Set
 
 from blspy import G1Element
 
-from taco.consensus.cost_calculator import calculate_cost_of_program, NPCResult
-from taco.full_node.bundle_tools import simple_solution_generator
-from taco.full_node.mempool_check_conditions import get_name_puzzle_conditions
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.program import Program, SerializedProgram
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_solution import CoinSolution
-from taco.types.generator_types import BlockGenerator
-from taco.types.spend_bundle import SpendBundle
-from taco.util.ints import uint8, uint32, uint64, uint128
-from taco.util.hash import std_hash
-from taco.wallet.derivation_record import DerivationRecord
-from taco.wallet.puzzles.p2_delegated_puzzle_or_hidden_puzzle import (
+from cunt.consensus.cost_calculator import calculate_cost_of_program, NPCResult
+from cunt.full_node.bundle_tools import simple_solution_generator
+from cunt.full_node.mempool_check_conditions import get_name_puzzle_conditions
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.program import Program, SerializedProgram
+from cunt.types.announcement import Announcement
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.coin_solution import CoinSolution
+from cunt.types.generator_types import BlockGenerator
+from cunt.types.spend_bundle import SpendBundle
+from cunt.util.ints import uint8, uint32, uint64, uint128
+from cunt.util.hash import std_hash
+from cunt.wallet.derivation_record import DerivationRecord
+from cunt.wallet.puzzles.p2_delegated_puzzle_or_hidden_puzzle import (
     DEFAULT_HIDDEN_PUZZLE_HASH,
     calculate_synthetic_secret_key,
     puzzle_for_pk,
     solution_for_conditions,
 )
-from taco.wallet.puzzles.puzzle_utils import (
+from cunt.wallet.puzzles.puzzle_utils import (
     make_assert_coin_announcement,
     make_assert_puzzle_announcement,
     make_assert_my_coin_id_condition,
@@ -33,13 +33,13 @@ from taco.wallet.puzzles.puzzle_utils import (
     make_create_coin_condition,
     make_reserve_fee_condition,
 )
-from taco.wallet.secret_key_store import SecretKeyStore
-from taco.wallet.sign_coin_solutions import sign_coin_solutions
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.transaction_type import TransactionType
-from taco.wallet.util.wallet_types import WalletType
-from taco.wallet.wallet_coin_record import WalletCoinRecord
-from taco.wallet.wallet_info import WalletInfo
+from cunt.wallet.secret_key_store import SecretKeyStore
+from cunt.wallet.sign_coin_solutions import sign_coin_solutions
+from cunt.wallet.transaction_record import TransactionRecord
+from cunt.wallet.util.transaction_type import TransactionType
+from cunt.wallet.util.wallet_types import WalletType
+from cunt.wallet.wallet_coin_record import WalletCoinRecord
+from cunt.wallet.wallet_info import WalletInfo
 
 
 class Wallet:
@@ -437,14 +437,14 @@ class Wallet:
         await self.wallet_state_manager.add_pending_transaction(tx)
 
     # This is to be aggregated together with a coloured coin offer to ensure that the trade happens
-    async def create_spend_bundle_relative_taco(self, taco_amount: int, exclude: List[Coin]) -> SpendBundle:
+    async def create_spend_bundle_relative_cunt(self, cunt_amount: int, exclude: List[Coin]) -> SpendBundle:
         list_of_solutions = []
         utxos = None
 
         # If we're losing value then get coins with at least that much value
         # If we're gaining value then our amount doesn't matter
-        if taco_amount < 0:
-            utxos = await self.select_coins(abs(taco_amount), exclude)
+        if cunt_amount < 0:
+            utxos = await self.select_coins(abs(cunt_amount), exclude)
         else:
             utxos = await self.select_coins(0, exclude)
 
@@ -452,7 +452,7 @@ class Wallet:
 
         # Calculate output amount given sum of utxos
         spend_value = sum([coin.amount for coin in utxos])
-        taco_amount = spend_value + taco_amount
+        cunt_amount = spend_value + cunt_amount
 
         # Create coin solutions for each utxo
         output_created = None
@@ -460,7 +460,7 @@ class Wallet:
             puzzle = await self.puzzle_for_puzzle_hash(coin.puzzle_hash)
             if output_created is None:
                 newpuzhash = await self.get_new_puzzlehash()
-                primaries = [{"puzzlehash": newpuzhash, "amount": taco_amount}]
+                primaries = [{"puzzlehash": newpuzhash, "amount": cunt_amount}]
                 solution = self.make_solution(primaries=primaries)
                 output_created = coin
             list_of_solutions.append(CoinSolution(coin, puzzle, solution))

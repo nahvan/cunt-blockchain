@@ -7,19 +7,19 @@ import time
 from pprint import pprint
 from typing import List, Dict, Optional, Callable
 
-from taco.cmds.wallet_funcs import print_balance, wallet_coin_unit
-from taco.pools.pool_wallet_info import PoolWalletInfo, PoolSingletonState
-from taco.protocols.pool_protocol import POOL_PROTOCOL_VERSION
-from taco.rpc.farmer_rpc_client import FarmerRpcClient
-from taco.rpc.wallet_rpc_client import WalletRpcClient
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.util.bech32m import encode_puzzle_hash
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.config import load_config
-from taco.util.default_root import DEFAULT_ROOT_PATH
-from taco.util.ints import uint16, uint32
-from taco.wallet.transaction_record import TransactionRecord
-from taco.wallet.util.wallet_types import WalletType
+from cunt.cmds.wallet_funcs import print_balance, wallet_coin_unit
+from cunt.pools.pool_wallet_info import PoolWalletInfo, PoolSingletonState
+from cunt.protocols.pool_protocol import POOL_PROTOCOL_VERSION
+from cunt.rpc.farmer_rpc_client import FarmerRpcClient
+from cunt.rpc.wallet_rpc_client import WalletRpcClient
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.util.bech32m import encode_puzzle_hash
+from cunt.util.byte_types import hexstr_to_bytes
+from cunt.util.config import load_config
+from cunt.util.default_root import DEFAULT_ROOT_PATH
+from cunt.util.ints import uint16, uint32
+from cunt.wallet.transaction_record import TransactionRecord
+from cunt.wallet.util.wallet_types import WalletType
 
 
 async def create_pool_args(pool_url: str) -> Dict:
@@ -90,7 +90,7 @@ async def create(args: dict, wallet_client: WalletRpcClient, fingerprint: int) -
                 tx = await wallet_client.get_transaction(str(1), tx_record.name)
                 if len(tx.sent_to) > 0:
                     print(f"Transaction submitted to nodes: {tx.sent_to}")
-                    print(f"Do taco wallet get_transaction -f {fingerprint} -tx 0x{tx_record.name} to get status")
+                    print(f"Do cunt wallet get_transaction -f {fingerprint} -tx 0x{tx_record.name} to get status")
                     return None
         except Exception as e:
             print(f"Error creating plot NFT: {e}")
@@ -165,7 +165,7 @@ async def show(args: dict, wallet_client: WalletRpcClient, fingerprint: int) -> 
         if isinstance(e, aiohttp.ClientConnectorError):
             print(
                 f"Connection error. Check if farmer is running at {farmer_rpc_port}."
-                f" You can run the farmer by:\n    taco start farmer-only"
+                f" You can run the farmer by:\n    cunt start farmer-only"
             )
         else:
             print(f"Exception from 'wallet' {e}")
@@ -229,7 +229,7 @@ async def get_login_link(launcher_id_str: str) -> None:
         if isinstance(e, aiohttp.ClientConnectorError):
             print(
                 f"Connection error. Check if farmer is running at {farmer_rpc_port}."
-                f" You can run the farmer by:\n    taco start farmer-only"
+                f" You can run the farmer by:\n    cunt start farmer-only"
             )
         else:
             print(f"Exception from 'farmer' {e}")
@@ -256,7 +256,7 @@ async def submit_tx_with_confirmation(
                 tx = await wallet_client.get_transaction(str(1), tx_record.name)
                 if len(tx.sent_to) > 0:
                     print(f"Transaction submitted to nodes: {tx.sent_to}")
-                    print(f"Do taco wallet get_transaction -f {fingerprint} -tx 0x{tx_record.name} to get status")
+                    print(f"Do cunt wallet get_transaction -f {fingerprint} -tx 0x{tx_record.name} to get status")
                     return None
         except Exception as e:
             print(f"Error performing operation on Plot NFT -f {fingerprint} wallet id: {wallet_id}: {e}")

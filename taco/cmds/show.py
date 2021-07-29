@@ -19,16 +19,16 @@ async def show_async(
 
     from time import localtime, struct_time
     from typing import List, Optional
-    from taco.consensus.block_record import BlockRecord
-    from taco.rpc.full_node_rpc_client import FullNodeRpcClient
-    from taco.server.outbound_message import NodeType
-    from taco.types.full_block import FullBlock
-    from taco.util.bech32m import encode_puzzle_hash
-    from taco.util.byte_types import hexstr_to_bytes
-    from taco.util.config import load_config
-    from taco.util.default_root import DEFAULT_ROOT_PATH
-    from taco.util.ints import uint16
-    from taco.util.misc import format_bytes
+    from cunt.consensus.block_record import BlockRecord
+    from cunt.rpc.full_node_rpc_client import FullNodeRpcClient
+    from cunt.server.outbound_message import NodeType
+    from cunt.types.full_block import FullBlock
+    from cunt.util.bech32m import encode_puzzle_hash
+    from cunt.util.byte_types import hexstr_to_bytes
+    from cunt.util.config import load_config
+    from cunt.util.default_root import DEFAULT_ROOT_PATH
+    from cunt.util.ints import uint16
+    from cunt.util.misc import format_bytes
 
     try:
         config = load_config(DEFAULT_ROOT_PATH, "config.yaml")
@@ -62,7 +62,7 @@ async def show_async(
                 print(f"Current Blockchain Status: Not Synced. Peak height: {peak.height}")
             else:
                 print("\nSearching for an initial chain\n")
-                print("You may be able to expedite with 'taco show -a host:port' using a known node.\n")
+                print("You may be able to expedite with 'cunt show -a host:port' using a known node.\n")
 
             if peak is not None:
                 if peak.is_transaction_block:

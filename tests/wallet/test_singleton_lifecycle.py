@@ -5,16 +5,16 @@ from typing import List, Tuple
 from blspy import G2Element
 from clvm_tools import binutils
 
-from taco.types.blockchain_format.program import Program, INFINITE_COST
-from taco.types.announcement import Announcement
-from taco.types.blockchain_format.coin import Coin
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_solution import CoinSolution
-from taco.types.spend_bundle import SpendBundle
-from taco.util.condition_tools import ConditionOpcode
+from cunt.types.blockchain_format.program import Program, INFINITE_COST
+from cunt.types.announcement import Announcement
+from cunt.types.blockchain_format.coin import Coin
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.coin_solution import CoinSolution
+from cunt.types.spend_bundle import SpendBundle
+from cunt.util.condition_tools import ConditionOpcode
 
-from taco.util.ints import uint64
-from taco.wallet.puzzles.load_clvm import load_clvm
+from cunt.util.ints import uint64
+from cunt.wallet.puzzles.load_clvm import load_clvm
 
 from tests.core.full_node.test_conditions import bt, check_spend_bundle_validity, initial_blocks
 

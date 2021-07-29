@@ -7,7 +7,7 @@ import {
   CardStep,
   Flex,
   TextField,
-} from '@taco/core';
+} from '@cunt/core';
 import { Typography } from '@material-ui/core';
 import useSelectDirectory from '../../../hooks/useSelectDirectory';
 

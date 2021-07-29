@@ -1,12 +1,12 @@
 from typing import Dict, List, Optional
 
-from taco.consensus.block_record import BlockRecord
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.blockchain_format.sub_epoch_summary import SubEpochSummary
-from taco.types.blockchain_format.vdf import VDFInfo
-from taco.types.header_block import HeaderBlock
-from taco.types.weight_proof import SubEpochChallengeSegment
-from taco.util.ints import uint32
+from cunt.consensus.block_record import BlockRecord
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.blockchain_format.sub_epoch_summary import SubEpochSummary
+from cunt.types.blockchain_format.vdf import VDFInfo
+from cunt.types.header_block import HeaderBlock
+from cunt.types.weight_proof import SubEpochChallengeSegment
+from cunt.util.ints import uint32
 
 
 class BlockchainInterface:

@@ -1,6 +1,6 @@
 from typing import Any, BinaryIO
 
-from taco.util.struct_stream import StructStream
+from cunt.util.struct_stream import StructStream
 
 
 class int8(StructStream):

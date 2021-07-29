@@ -1,24 +1,24 @@
 from typing import Dict, List, Optional, Tuple, Any
 
-from taco.consensus.block_record import BlockRecord
-from taco.full_node.signage_point import SignagePoint
-from taco.rpc.rpc_client import RpcClient
-from taco.types.blockchain_format.sized_bytes import bytes32
-from taco.types.coin_record import CoinRecord
-from taco.types.coin_solution import CoinSolution
-from taco.types.end_of_slot_bundle import EndOfSubSlotBundle
-from taco.types.full_block import FullBlock
-from taco.types.spend_bundle import SpendBundle
-from taco.types.unfinished_header_block import UnfinishedHeaderBlock
-from taco.util.byte_types import hexstr_to_bytes
-from taco.util.ints import uint32, uint64
+from cunt.consensus.block_record import BlockRecord
+from cunt.full_node.signage_point import SignagePoint
+from cunt.rpc.rpc_client import RpcClient
+from cunt.types.blockchain_format.sized_bytes import bytes32
+from cunt.types.coin_record import CoinRecord
+from cunt.types.coin_solution import CoinSolution
+from cunt.types.end_of_slot_bundle import EndOfSubSlotBundle
+from cunt.types.full_block import FullBlock
+from cunt.types.spend_bundle import SpendBundle
+from cunt.types.unfinished_header_block import UnfinishedHeaderBlock
+from cunt.util.byte_types import hexstr_to_bytes
+from cunt.util.ints import uint32, uint64
 
 
 class FullNodeRpcClient(RpcClient):
     """
-    Client to Taco RPC, connects to a local full node. Uses HTTP/JSON, and converts back from
+    Client to Cunt RPC, connects to a local full node. Uses HTTP/JSON, and converts back from
     JSON into native python objects before returning. All api calls use POST requests.
-    Note that this is not the same as the peer protocol, or wallet protocol (which run Taco's
+    Note that this is not the same as the peer protocol, or wallet protocol (which run Cunt's
     protocol on top of TCP), it's a separate protocol on top of HTTP thats provides easy access
     to the full node.
     """
