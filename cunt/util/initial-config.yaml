@@ -302,7 +302,7 @@ full_node:
   # List of trusted DNS seeders to bootstrap from.
   # If you modify this, please change the hardcode as well from FullNode.set_server()
   dns_servers:
-    - "dns-introducer.cuntnetwork.net"
+    - "dns-introducer.cuntcoin.net"
   farmer_peer:
       host: *self_hostname
       port: 18692
@@ -310,7 +310,7 @@ full_node:
       host: *self_hostname
       port: 18658
   introducer_peer:
-      host: introducer.cuntnetwork.net  # Cunt AWS introducer IPv4/IPv6
+      host: introducer.cuntcoin.net  # Cunt AWS introducer IPv4/IPv6
       port: 18690
   wallet_peer:
     host: *self_hostname
@@ -394,7 +394,7 @@ wallet:
   recent_peer_threshold: 6000
 
   introducer_peer:
-    host: introducer.cuntnetwork.net # Cunt AWS introducer IPv4/IPv6
+    host: introducer.cuntcoin.net # Cunt AWS introducer IPv4/IPv6
     port: 18690
 
   ssl:

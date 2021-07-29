@@ -4,7 +4,7 @@ Discord Channel: https://discord.gg/xguteVCYHh
 
 Website: https://cuntnetwork.net (coming soon)
 
-Introducer: dns-introducer.cuntnetwork.net:18690
+Introducer: dns-introducer.cuntcoin.net:18690
 
 Changelog:
 v1.0.0 - Initial Release
